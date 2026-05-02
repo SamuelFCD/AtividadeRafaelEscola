@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sistema Escolar — IFRN{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'alunos/css/estilo.css' %}"> 
+</head>
+
+<body>
+
+    <header> <img src="{% static 'alunos/img/ifrn.jpg' %}" alt="Logo IFRN" height="50">
+
+        <h1>Sistema de Gestão Escolar</h1>
+
+    </header>
+
+    <nav> 
+
+        <a href="{% url 'home' %}">🏠 Home</a> 
+        <a href="{% url 'alunos:lista' %}">👥 Lista de Alunos</a> 
+        <a href="{% url 'alunos:novo' %}">➕ Novo Aluno</a> 
+
+    </nav>
+
+    <main> 
+
+        {% block content %} {% endblock %}
+
+    </main>
+
+    <footer>
+
+        <p>© 2025 IFRN — Instituto Federal do Rio Grande do Norte</p>
+
+    </footer>
+</body>
+
+</html>

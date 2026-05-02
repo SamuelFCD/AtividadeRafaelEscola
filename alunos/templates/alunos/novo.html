@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} Novo Aluno {% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Cadastrar Novo Aluno</h2>
+
+    <p><em>Formulário estático — apenas protótipo visual.</em></p> <!-- Formulário estático (sem ação real) -->
+
+    <div> <label for="nome">Nome Completo</label> <input type="text" id="nome" placeholder="Ex: João da Silva">
+    </div>
+
+    <div> 
+        <label for="matricula">Matrícula</label> 
+        <input type="text" id="matricula" placeholder="Ex: 2025001"> 
+    </div>
+
+    <div> 
+        <label for="curso">Curso</label> 
+
+        <select id="curso">
+
+            <option>Informática</option>
+            <option>Administração</option>
+            <option>Eletrotécnica</option>
+            <option>Edificações</option>
+
+        </select> 
+
+    </div> 
+    <a href="{% url 'alunos:lista' %}" class="btn btn-verde">Salvar Aluno</a> 
+    <a href="{% url 'alunos:lista' %}" class="btn" style="background:#757575;color:white;margin-left:8px;">Cancelar</a>
+    
+</div> 
+
+{% endblock %}

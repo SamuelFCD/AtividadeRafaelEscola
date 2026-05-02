@@ -1,0 +1,46 @@
+{% extends 'base.html' %} 
+{% block title %} Detalhes do Aluno {% endblock %} 
+{% block content %} 
+
+<div class="card">
+
+    <h2>Perfil do Aluno</h2>
+
+    <table>
+
+        <tr>
+            <th>Matrícula</th>
+            <td>2025001</td>
+        </tr>
+
+        <tr>
+            <th>Nome</th>
+            <td>João da Silva</td>
+        </tr>
+
+        <tr>
+            <th>Curso</th>
+            <td>Informática</td>
+        </tr>
+
+        <tr>
+            <th>Turma</th>
+            <td>1º Ano — Turma A</td>
+        </tr>
+
+        <tr>
+            <th>Status</th>
+            <td><span style="color:green; font-weight:bold;">✅ Ativo</span></td>
+        </tr>
+
+        <tr>
+            <th>E-mail</th>
+            <td>joao.silva@escolar.ifrn.edu.br</td>
+        </tr>
+
+    </table> 
+    <br> 
+    <a href="{% url 'alunos:lista' %}" class="btn btn-verde">← Voltar para Lista</a>
+</div> 
+
+{% endblock %}
