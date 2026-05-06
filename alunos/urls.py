@@ -7,8 +7,8 @@ app_name = 'alunos'
 urlpatterns = [
 
     path('', views.lista_view, name='lista'),
-    path('/novo', views.novo_view, name='novo'),
-    path('/detalhe', views.detalhe_view, name='detalhe')
+    path('novo/', views.novo_view, name='novo'),
+    path('detalhe/', views.detalhe_view, name='detalhe')
 
 
 
